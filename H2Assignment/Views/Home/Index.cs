@@ -20,21 +20,32 @@ namespace H2Assignment.Views.Home
         public static void Menu()
         {
             Console.WriteLine("\n1.Add student \n2.Get a list of students \n3.Update a student \n4.Delete a student");
-
-            switch (Int32.TryParse(Console.ReadLine(), out int value) ? value : 0)
+            bool loopState = true;
+            while (loopState)
             {
-                case (int)HomeMenu.Create:
-                    Console.WriteLine("Create");
-                    break;
-                case (int)HomeMenu.Read:
-                    Console.WriteLine("Read");
-                    break;
-                case (int)HomeMenu.Update:
-                    Console.WriteLine("Update");
-                    break;
-                case (int)HomeMenu.Delete:
-                    Console.WriteLine("Delete");
-                    break;
+                switch (Int32.TryParse(Console.ReadLine(), out int value) ? value : 0)
+                {
+                    case (int)HomeMenu.Create:
+                        Console.WriteLine("Create");
+                        loopState = false;
+                        break;
+                    case (int)HomeMenu.Read:
+                        Console.WriteLine("Read");
+                        loopState = false;
+                        break;
+                    case (int)HomeMenu.Update:
+                        Console.WriteLine("Update");
+                        loopState = false;
+                        break;
+                    case (int)HomeMenu.Delete:
+                        Console.WriteLine("Delete");
+                        loopState = false;
+                        break;
+                    default:
+                        Console.WriteLine("Please choose between 1-4 again");
+                        break;
+                }
+           
             }
         }
 
