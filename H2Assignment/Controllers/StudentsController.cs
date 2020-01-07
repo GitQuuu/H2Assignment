@@ -57,9 +57,21 @@ namespace H2Assignment.Controllers
             }
         }
 
-        public void Update()
+        public static void Update(int id)
         {
-
+            foreach (Student inList in students)
+            {
+                if (id != inList.Id)
+                {
+                    Console.WriteLine("ID doesnt match anything in the list");
+                }
+                else
+                {
+                    inList.FirstName = Utility.Ask("Student first name");
+                    inList.LastName = Utility.Ask("Student last name");
+                    inList.PhoneNumber = int.Parse(Utility.Ask("Student phone number"));
+                }
+            }
         }
 
         public void Delete() 
