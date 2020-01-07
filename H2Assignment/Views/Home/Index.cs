@@ -35,16 +35,17 @@ namespace H2Assignment.Views.Home
                             loopState = false;
                             break;
                         case (int)HomeMenu.Read:
-                            Console.Clear();
                             StudentsController.Read();
                             loopState = false;
                             break;
                         case (int)HomeMenu.Update:
+                            Console.WriteLine("Select a student by Student ID number");
                             StudentsController.Update(int.Parse(Console.ReadLine()));
                             loopState = false;
                             break;
                         case (int)HomeMenu.Delete:
-                            Console.WriteLine("Delete");
+                            Console.WriteLine("Select a student to delete by Student ID number");
+                            StudentsController.Delete(int.Parse(Console.ReadLine()));
                             loopState = false;
                             break;
                         case (int)HomeMenu.Exit:

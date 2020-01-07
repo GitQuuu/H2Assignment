@@ -8,7 +8,7 @@ namespace H2Assignment.Controllers
 {
     class StudentsController
     {
-        static List<Student> students = new List<Student>();
+        static readonly List<Student> students = new List<Student>();
 
         public static void Create()
         {
@@ -51,10 +51,20 @@ namespace H2Assignment.Controllers
 
         public static void Read()
         {
-            foreach (Student student in students)
+            Console.WriteLine("Select a student by Student ID number\n");
+
+            if (students.Count == 0 )
             {
-                Console.WriteLine($"Student ID:{student.Id} NAME:{student.FirstName} {student.LastName} PHONE NUMBER:{student.PhoneNumber}");
+                Console.WriteLine("List is empty");
             }
+            else
+            {
+                foreach (Student student in students)
+                {
+                    Console.WriteLine($"Student ID:{student.Id} NAME:{student.FirstName} {student.LastName} PHONE NUMBER:{student.PhoneNumber}");
+                }
+            }
+           
         }
 
         public static void Update(int id)
@@ -74,9 +84,19 @@ namespace H2Assignment.Controllers
             }
         }
 
-        public void Delete() 
+        public static void Delete(int id) 
         {
-
+            foreach (Student inList in students.ToArray())
+            {
+                if (id == inList.Id)
+                {
+                    students.Remove(inList);
+                }
+                else
+                {
+                    Console.WriteLine("ID doesnt match anything in the list");
+                }
+            }
         }
     }
 }
