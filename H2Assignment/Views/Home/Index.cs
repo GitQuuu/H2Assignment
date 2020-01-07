@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using H2Assignment.Controllers;
 
 namespace H2Assignment.Views.Home
 {
@@ -27,6 +28,7 @@ namespace H2Assignment.Views.Home
                 {
                     case (int)HomeMenu.Create:
                         Console.WriteLine("Create");
+                        StudentsController.Create();
                         loopState = false;
                         break;
                     case (int)HomeMenu.Read:
