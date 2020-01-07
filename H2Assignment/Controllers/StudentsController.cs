@@ -13,5 +13,15 @@ namespace H2Assignment.Controllers
         {
 
         }
+
+        public void Update()
+        {
+
+        }
+
+        public void Delete()
+        {
+
+        }
     }
 }

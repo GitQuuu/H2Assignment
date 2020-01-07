@@ -12,6 +12,7 @@ namespace H2Assignment
         static void Main(string[] args)
         {
             Index.Welcome();
+            Index.Menu();
 
             Console.ReadLine();
         }
