@@ -31,10 +31,13 @@ namespace H2Assignment.Views.Home
                     {
                         case (int)HomeMenu.Create:
                             StudentsController.Create();
+                            Console.Clear();
                             loopState = false;
                             break;
                         case (int)HomeMenu.Read:
                             Console.WriteLine("Read");
+                            Console.Clear();
+                            StudentsController.Read();
                             loopState = false;
                             break;
                         case (int)HomeMenu.Update:

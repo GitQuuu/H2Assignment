@@ -49,9 +49,12 @@ namespace H2Assignment.Controllers
            
         }
 
-        public void Save()
+        public static void Read()
         {
-
+            foreach (Student student in students)
+            {
+                Console.WriteLine($"Student ID:{student.Id} NAME:{student.FirstName} {student.LastName} PHONE NUMBER:{student.PhoneNumber}");
+            }
         }
 
         public void Update()
@@ -59,7 +62,7 @@ namespace H2Assignment.Controllers
 
         }
 
-        public void Delete()
+        public void Delete() 
         {
 
         }
