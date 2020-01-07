@@ -11,7 +11,7 @@ namespace H2Assignment.Views.Home
     {
         public enum HomeMenu
         {
-            Create = 1, Read = 2, Update = 3, Delete = 4,
+            Create = 1, Read = 2, Update = 3, Delete = 4, Exit = 5,
         }
         public static void Welcome()
         {
@@ -20,36 +20,44 @@ namespace H2Assignment.Views.Home
 
         public static void Menu()
         {
-            Console.WriteLine("\n1.Add student \n2.Get a list of students \n3.Update a student \n4.Delete a student\n");
-            bool loopState = true;
-
-            while (loopState)
+            bool terminate = true;
+            do
             {
-                switch (Int32.TryParse(Console.ReadLine(), out int value) ? value : 0)
+                Console.WriteLine("\nSelect following options \n \n1.Add student \n2.Get a list of students \n3.Update a student \n4.Delete a student \n5.Exit program");
+                bool loopState = true;
+                while (loopState)
                 {
-                    case (int)HomeMenu.Create:
-                        Console.WriteLine("Create");
-                        StudentsController.Create();
-                        loopState = false;
-                        break;
-                    case (int)HomeMenu.Read:
-                        Console.WriteLine("Read");
-                        loopState = false;
-                        break;
-                    case (int)HomeMenu.Update:
-                        Console.WriteLine("Update");
-                        loopState = false;
-                        break;
-                    case (int)HomeMenu.Delete:
-                        Console.WriteLine("Delete");
-                        loopState = false;
-                        break;
-                    default:
-                        Console.WriteLine("Please choose between 1-4 again");
-                        break;
+                    switch (int.TryParse(Console.ReadLine(), out int value) ? value : 0)
+                    {
+                        case (int)HomeMenu.Create:
+                            StudentsController.Create();
+                            loopState = false;
+                            break;
+                        case (int)HomeMenu.Read:
+                            Console.WriteLine("Read");
+                            loopState = false;
+                            break;
+                        case (int)HomeMenu.Update:
+                            Console.WriteLine("Update");
+                            loopState = false;
+                            break;
+                        case (int)HomeMenu.Delete:
+                            Console.WriteLine("Delete");
+                            loopState = false;
+                            break;
+                        case (int)HomeMenu.Exit:
+                            loopState = false;
+                            terminate = false;
+                            break;
+                        default:
+                            Console.WriteLine("Please choose between 1-4 again");
+                            break;
+                    }
+
                 }
+            } while (terminate);
            
-            }
+
         }
 
     }

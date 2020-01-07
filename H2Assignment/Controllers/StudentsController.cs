@@ -31,6 +31,7 @@ namespace H2Assignment.Controllers
                     switch (Utility.Ask("add student y/n?"))
                     {
                         case "y":
+                            choiceLoopState = false;
                             break;
                         case "n":
                             choiceLoopState = false;

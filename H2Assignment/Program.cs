@@ -15,7 +15,6 @@ namespace H2Assignment
             Index.Welcome();
             Index.Menu();
 
-            Console.ReadLine();
         }
     }
 }
