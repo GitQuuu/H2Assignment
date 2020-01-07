@@ -20,8 +20,9 @@ namespace H2Assignment.Views.Home
 
         public static void Menu()
         {
-            Console.WriteLine("\n1.Add student \n2.Get a list of students \n3.Update a student \n4.Delete a student");
+            Console.WriteLine("\n1.Add student \n2.Get a list of students \n3.Update a student \n4.Delete a student\n");
             bool loopState = true;
+
             while (loopState)
             {
                 switch (Int32.TryParse(Console.ReadLine(), out int value) ? value : 0)
