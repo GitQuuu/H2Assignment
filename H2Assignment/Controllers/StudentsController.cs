@@ -89,7 +89,7 @@ namespace H2Assignment.Controllers
                 {
                     inList.FirstName = Utility.Ask("Student first name");
                     inList.LastName = Utility.Ask("Student last name");
-                    inList.PhoneNumber = int.Parse(Utility.Ask("Student phone number"));
+                    inList.PhoneNumber = int.Parse(Utility.Ask("Student phone number",Student.DefaultValueId));
                     Console.Clear();
                 }
                 
