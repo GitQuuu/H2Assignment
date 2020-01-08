@@ -55,7 +55,7 @@ namespace H2Assignment.Controllers
 
             if (students.Count == 0 )
             {
-                Console.WriteLine("List is empty");
+                Console.WriteLine("LIST IS EMPTY");
             }
             else
             {
@@ -91,6 +91,7 @@ namespace H2Assignment.Controllers
                 if (id == inList.Id)
                 {
                     students.Remove(inList);
+                    Console.WriteLine("STUDENT IS DELETED");
                 }
                 else
                 {

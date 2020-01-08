@@ -35,6 +35,7 @@ namespace H2Assignment.Views.Home
                             loopState = false;
                             break;
                         case (int)HomeMenu.Read:
+                            Console.Clear();
                             StudentsController.Read();
                             loopState = false;
                             break;
