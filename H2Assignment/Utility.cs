@@ -43,7 +43,7 @@ namespace H2Assignment
                 }
                 else
                 {
-                    Console.WriteLine("ID value must be a number, please try again");
+                    Console.WriteLine("Value must be a number, please try again");
 
                 }
 
