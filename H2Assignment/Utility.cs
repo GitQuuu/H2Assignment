@@ -10,10 +10,46 @@ namespace H2Assignment
 {
     class Utility
     {
+        /// <summary>
+        /// A simple method for WriteLine and ReadLine
+        /// </summary>
+        /// <param name="question"></param>
+        /// <returns></returns>
         public static string Ask(string question)
         {
             Console.WriteLine(question);
             return Console.ReadLine();
+        }
+        /// <summary>
+        /// check input to be a number
+        /// </summary>
+        /// <param name="question"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public static string Ask(string question,int id)
+        {
+            Console.WriteLine(question);
+
+            string result = "";
+            bool loopState = true;
+
+            do
+            {
+                if (int.TryParse(Console.ReadLine(), out int output))
+                {
+                    result = output.ToString();
+                    loopState = false;
+
+                }
+                else
+                {
+                    Console.WriteLine("ID value must be a number, please try again");
+
+                }
+
+            } while (loopState);
+
+            return result;
         }
     }
 }

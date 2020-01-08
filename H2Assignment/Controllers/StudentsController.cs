@@ -18,10 +18,10 @@ namespace H2Assignment.Controllers
                 Console.Clear();
                 Student newStudent = new Student
                 {
-                    Id = int.Parse(Utility.Ask("Give student Id")),
+                    Id = int.Parse(Utility.Ask("Student ID",0)),
                     FirstName = Utility.Ask("Student first name"),
                     LastName = Utility.Ask("Student last name"),
-                    PhoneNumber = int.Parse(Utility.Ask("Student phone number")),
+                    PhoneNumber = int.Parse(Utility.Ask("Student phone number",0)),
                 };
 
                 students.Add(newStudent);
