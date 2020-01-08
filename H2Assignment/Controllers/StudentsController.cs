@@ -56,7 +56,7 @@ namespace H2Assignment.Controllers
 
             if (students.Count == 0 )
             {
-                Console.WriteLine("LIST IS EMPTY");
+                Console.WriteLine("LIST IS EMPTY\n");
             }
             else
             {
@@ -83,7 +83,7 @@ namespace H2Assignment.Controllers
                     inList.LastName = Utility.Ask("Student last name");
                     inList.PhoneNumber = int.Parse(Utility.Ask("Student phone number"));
                 }
-                Console.Clear();
+                
             }
         }
 
