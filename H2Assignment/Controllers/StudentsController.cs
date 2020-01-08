@@ -74,7 +74,7 @@ namespace H2Assignment.Controllers
             if (students.Count == 0)
             {
                 Console.Clear();
-                Console.WriteLine("ID doesnt match anything in the list\n");
+                Console.WriteLine("List does not contain any students\n");
                 return;
             }
             
@@ -90,6 +90,7 @@ namespace H2Assignment.Controllers
                     inList.FirstName = Utility.Ask("Student first name");
                     inList.LastName = Utility.Ask("Student last name");
                     inList.PhoneNumber = int.Parse(Utility.Ask("Student phone number"));
+                    Console.Clear();
                 }
                 
             }
@@ -100,7 +101,7 @@ namespace H2Assignment.Controllers
             if (students.Count == 0)
             {
                 Console.Clear();
-                Console.WriteLine("ID doesnt match anything in the list\n");
+                Console.WriteLine("List does not contain any students\n");
                 return;
             }
 
@@ -109,7 +110,8 @@ namespace H2Assignment.Controllers
                 if (id == inList.Id)
                 {
                     students.Remove(inList);
-                    Console.WriteLine("STUDENT IS DELETED");
+                    Console.Clear();
+                    Console.WriteLine("STUDENT IS DELETED\n");
                 }
                 else
                 {
