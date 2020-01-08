@@ -71,6 +71,14 @@ namespace H2Assignment.Controllers
 
         public static void Update(int id)
         {
+            if (students.Count == 0)
+            {
+                Console.Clear();
+                Console.WriteLine("ID doesnt match anything in the list\n");
+                return;
+            }
+            
+
             foreach (Student inList in students)
             {
                 if (id != inList.Id)
@@ -89,6 +97,13 @@ namespace H2Assignment.Controllers
 
         public static void Delete(int id) 
         {
+            if (students.Count == 0)
+            {
+                Console.Clear();
+                Console.WriteLine("ID doesnt match anything in the list\n");
+                return;
+            }
+
             foreach (Student inList in students.ToArray())
             {
                 if (id == inList.Id)
