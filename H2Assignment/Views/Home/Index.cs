@@ -56,7 +56,7 @@ namespace H2Assignment.Views.Home
                             terminate = false;
                             break;
                         default:
-                            Console.WriteLine("Please choose between 1-4 again");
+                            Console.WriteLine("Please choose between 1-5 again");
                             break;
                     }
 
