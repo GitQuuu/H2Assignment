@@ -15,6 +15,7 @@ namespace H2Assignment.Controllers
             bool loopState = true;
             do
             {
+                Console.Clear();
                 Student newStudent = new Student
                 {
                     Id = int.Parse(Utility.Ask("Give student Id")),
@@ -34,6 +35,7 @@ namespace H2Assignment.Controllers
                             choiceLoopState = false;
                             break;
                         case "n":
+                            Console.Clear();
                             choiceLoopState = false;
                             loopState = false;
                             break;
@@ -60,8 +62,9 @@ namespace H2Assignment.Controllers
             {
                 foreach (Student student in students)
                 {
-                    Console.WriteLine($"Student ID:{student.Id} NAME:{student.FirstName} {student.LastName} PHONE NUMBER:{student.PhoneNumber}");
+                    Console.WriteLine($"Student ID:{student.Id} NAME:{student.FirstName} {student.LastName} PHONE NUMBER:{student.PhoneNumber}\n");
                 }
+                
             }
            
         }
@@ -72,7 +75,7 @@ namespace H2Assignment.Controllers
             {
                 if (id != inList.Id)
                 {
-                    Console.WriteLine("ID doesnt match anything in the list");
+                    Console.WriteLine("ID doesnt match anything in the list\n");
                 }
                 else
                 {
@@ -80,6 +83,7 @@ namespace H2Assignment.Controllers
                     inList.LastName = Utility.Ask("Student last name");
                     inList.PhoneNumber = int.Parse(Utility.Ask("Student phone number"));
                 }
+                Console.Clear();
             }
         }
 
@@ -94,7 +98,7 @@ namespace H2Assignment.Controllers
                 }
                 else
                 {
-                    Console.WriteLine("ID doesnt match anything in the list");
+                    Console.WriteLine("ID doesnt match anything in the list\n");
                 }
             }
         }

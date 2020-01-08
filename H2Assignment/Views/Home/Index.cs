@@ -25,20 +25,19 @@ namespace H2Assignment.Views.Home
             bool terminate = true;
             do
             {
-                Console.WriteLine("\n1.Add student \n2.Get a list of students \n3.Update a student \n4.Delete a student \n5.Exit program");   
+                Console.WriteLine("1.Add student \n2.Get a list of students \n3.Update a student \n4.Delete a student \n5.Exit program");   
                 bool loopState = true;
                 while (loopState)
                 {
                     switch (int.TryParse(Console.ReadLine(), out int value) ? value : 0)
                     {
                         case (int)HomeMenu.Create:
-                            Console.Clear();
                             StudentsController.Create();
                             loopState = false;
                             break;
                         case (int)HomeMenu.Read:
                             Console.Clear();
-                            Console.WriteLine("Select a student by Student ID number\n");
+                            Console.WriteLine("List of students\n");
                             StudentsController.Read();
                             loopState = false;
                             break;
