@@ -51,7 +51,6 @@ namespace H2Assignment.Controllers
 
         public static void Read()
         {
-            Console.WriteLine("Select a student by Student ID number\n");
 
             if (students.Count == 0 )
             {
