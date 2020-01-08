@@ -47,8 +47,6 @@ namespace H2Assignment.Controllers
              
             } while (loopState);
             
-
-           
         }
 
         public static void Read()
@@ -83,7 +81,7 @@ namespace H2Assignment.Controllers
             {
                 if (id != inList.Id)
                 {
-                    Console.WriteLine("ID doesnt match anything in the list\n");
+                    Console.WriteLine("ID does not match anything in the list\n");
                 }
                 else
                 {
@@ -115,7 +113,7 @@ namespace H2Assignment.Controllers
                 }
                 else
                 {
-                    Console.WriteLine("ID doesnt match anything in the list\n");
+                    Console.WriteLine("ID does not match anything in the list\n");
                 }
             }
         }
