@@ -79,18 +79,20 @@ namespace H2Assignment.Controllers
 
             foreach (Student inList in students)
             {
-                if (id != inList.Id)
-                {
-                    Console.WriteLine("ID does not match anything in the list\n");
-                }
-                else
+                if (id == inList.Id)
                 {
                     inList.FirstName = Utility.Ask("Student first name");
                     inList.LastName = Utility.Ask("Student last name");
-                    inList.PhoneNumber = int.Parse(Utility.Ask("Student phone number",Student.DefaultValueId));
+                    inList.PhoneNumber = int.Parse(Utility.Ask("Student phone number", Student.DefaultValueId));
                     Console.Clear();
+                    Console.WriteLine($"Student ID {id} now updated\n");
+                    break;
                 }
-                
+                else
+                {
+                    Console.Clear();
+                    Console.WriteLine($"Id:{id} does not excist in list\n");
+                }                      
             }
         }
 
@@ -109,11 +111,13 @@ namespace H2Assignment.Controllers
                 {
                     students.Remove(inList);
                     Console.Clear();
-                    Console.WriteLine("STUDENT IS DELETED\n");
+                    Console.WriteLine($"STUDENT {id} IS DELETED\n");
+                    
                 }
                 else
                 {
-                    Console.WriteLine("ID does not match anything in the list\n");
+                    Console.Clear();
+                    Console.WriteLine($"ID:{id} does not match anything in the list\n");
                 }
             }
         }
