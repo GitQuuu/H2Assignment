@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using H2Assignment.Controllers;
+using H2Assignment.Models;
 
 namespace H2Assignment.Views.Home
 {
@@ -42,13 +43,11 @@ namespace H2Assignment.Views.Home
                             loopState = false;
                             break;
                         case (int)HomeMenu.Update:
-                            Console.WriteLine("Select a student by Student ID number");
-                            StudentsController.Update(int.Parse(Console.ReadLine()));
+                            StudentsController.Update(int.Parse(Utility.Ask("Select student by ID", Student.DefaultValueId)));
                             loopState = false;
                             break;
                         case (int)HomeMenu.Delete:
-                            Console.WriteLine("Select a student to delete by Student ID number");
-                            StudentsController.Delete(int.Parse(Console.ReadLine()));
+                            StudentsController.Delete(int.Parse(Utility.Ask("Select a student to delete by Student ID", Student.DefaultValueId)));
                             loopState = false;
                             break;
                         case (int)HomeMenu.Exit:
