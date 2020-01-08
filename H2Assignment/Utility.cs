@@ -21,7 +21,7 @@ namespace H2Assignment
             return Console.ReadLine();
         }
         /// <summary>
-        /// check input to be a number
+        /// Preventing format errors - input must be integer
         /// </summary>
         /// <param name="question"></param>
         /// <param name="id"></param>

@@ -29,7 +29,7 @@ namespace H2Assignment.Controllers
                 bool choiceLoopState = true;
                 while (choiceLoopState)
                 {
-                    switch (Utility.Ask("add student y/n?"))
+                    switch (Utility.Ask("add a student y/n?"))
                     {
                         case "y":
                             choiceLoopState = false;
