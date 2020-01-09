@@ -104,7 +104,7 @@ namespace H2Assignment.Controllers
                 return;
             }
 
-            foreach (Student inList in students.ToArray())
+            foreach (Student inList in students)
             {
                 if (id == inList.Id)
                 {
