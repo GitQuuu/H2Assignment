@@ -86,14 +86,13 @@ namespace H2Assignment.Controllers
                     inList.PhoneNumber = int.Parse(Utility.Ask("Student phone number", Student.DefaultValueId));
                     Console.Clear();
                     Console.WriteLine($"Student ID {id} now updated\n");
-                    break;
+                    return;
                 }
-                else
-                {
-                    Console.Clear();
-                    Console.WriteLine($"Id:{id} does not excist in list\n");
-                }                      
+                                     
             }
+
+            Console.Clear();
+            Console.WriteLine($"Id:{id} does not exist in list\n");
         }
 
         public static void Delete(int id) 
@@ -114,12 +113,10 @@ namespace H2Assignment.Controllers
                     Console.WriteLine($"STUDENT {id} IS DELETED\n");
                     
                 }
-                else
-                {
-                    Console.Clear();
-                    Console.WriteLine($"ID:{id} does not match anything in the list\n");
-                }
             }
+
+            Console.Clear();
+            Console.WriteLine($"ID:{id} does not match anything in the list\n");
         }
     }
 }
