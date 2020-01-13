@@ -111,7 +111,7 @@ namespace H2Assignment.Controllers
                     students.Remove(inList);
                     Console.Clear();
                     Console.WriteLine($"STUDENT {id} IS DELETED\n");
-                    
+                    return;
                 }
             }
 
